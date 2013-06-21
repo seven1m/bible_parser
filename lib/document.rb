@@ -1,3 +1,5 @@
+require 'nokogiri'
+
 module USFX
 
   # The Document class used by Nokogiri SAX Parser,
