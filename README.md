@@ -17,6 +17,8 @@ gem install usfx
 You can get the World English Bible (WEB) in USFX format [here](http://ebible.org/web/). Unzip and put the usfx.xml file somewhere.
 
 ```ruby
+require 'usfx'
+
 class MyDocument < USFX::Document
   def verse(data)
     # do something with verse data, which looks like:
