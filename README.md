@@ -1,6 +1,6 @@
 # USFX
 
-This is a very simple SAX Document and Nokogiri SAX Parser for reading Unified Scripture Format XML (USFX) files as a stream and doing something interesting with the verse data.
+This is a very simple SAX Document and Nokogiri SAX Parser for reading [Unified Scripture Format XML](http://ebible.org/usfx/) (USFX) files as a stream and doing something interesting with the verse data.
 
 I needed to get the World English Bible (WEB) into a database easily and efficiently, so this was born. This parser excludes footnotes and other content other than the verse text itself, which may or may not be what you want.
 
