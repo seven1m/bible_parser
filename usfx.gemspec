@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.email        = "tim@timmorgan.org"
   s.homepage     = "https://github.com/seven1m/usfx"
   s.summary      = "Ruby stream parser for Unified Scripture Format XML (USFX)"
-  s.files        = %w(README.rdoc lib/document.rb test/usfx.rb)
+  s.files        = %w(README.md lib/document.rb lib/parser.rb)
   s.require_path = "lib"
   s.has_rdoc     = true
   s.add_dependency("nokogiri", ">= 1.6.0")
