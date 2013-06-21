@@ -1,2 +1,2 @@
-require_relative 'document'
-require_relative 'parser'
+require_relative 'usfx/document'
+require_relative 'usfx/parser'
