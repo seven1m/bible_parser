@@ -24,6 +24,7 @@ module USFX
       when 'c'
         start_chapter(attributes)
       when 'v'
+        end_verse if @mode == 'verse'
         start_verse(attributes)
       when 've'
         end_verse
@@ -35,6 +36,8 @@ module USFX
     # dispatcher for closing tags
     def end_element(name)
       case name
+      when 'book', 'c'
+        end_verse if @mode == 'verse'
       when 'h'
         end_book_title
       when 'f'
