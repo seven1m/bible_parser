@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name         = "usfx"
-  s.version      = "0.1.3"
+  s.version      = "1.0.0"
   s.author       = "Tim Morgan"
   s.email        = "tim@timmorgan.org"
   s.homepage     = "https://github.com/seven1m/usfx"
