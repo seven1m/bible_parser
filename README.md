@@ -8,6 +8,8 @@ For now, it supports USFX. But other formats are coming soon.
 
 ## Install
 
+When the library is ready, I'll publish the gem and you'll be able to:
+
 ```
 gem install bible_xml
 ```
