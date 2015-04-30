@@ -7,7 +7,7 @@ RSpec.configure do |config|
   config.filter_run focus: true
   config.run_all_when_everything_filtered = true
 
-  def tmp_path
-    File.expand_path('../../tmp', __FILE__)
+  def fixture_path(filename)
+    File.expand_path("../fixtures/#{filename}", __FILE__)
   end
 end

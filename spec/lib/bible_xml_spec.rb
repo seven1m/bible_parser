@@ -2,7 +2,7 @@ require_relative '../spec_helper'
 
 describe BibleXML do
   context 'given a USFX formatted file' do
-    let(:path) { File.join(tmp_path, 'web.usfx.xml') }
+    let(:path) { fixture_path('web.usfx.truncated.xml') }
 
     subject { BibleXML.new(File.open(path)) }
 
@@ -20,6 +20,7 @@ describe BibleXML do
         genesis = books.first
         expect(genesis).to be_a(BibleXML::Book)
         expect(genesis.id).to eq('GEN')
+        expect(books.to_a.size).to eq(2)
       end
     end
   end

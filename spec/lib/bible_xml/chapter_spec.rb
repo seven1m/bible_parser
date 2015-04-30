@@ -1,7 +1,7 @@
 require_relative '../../spec_helper'
 
 describe BibleXML::Chapter do
-  let(:path)   { File.join(tmp_path, 'web.usfx.xml') }
+  let(:path)   { fixture_path('web.usfx.truncated.xml') }
   let(:file)   { File.open(path) }
   let(:parser) { BibleXML::Parsers::USFX::Parser.new(file) }
 
