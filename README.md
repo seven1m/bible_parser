@@ -1,5 +1,7 @@
 # BibleXML
 
+[![Build Status](https://travis-ci.org/seven1m/bible_xml.svg?branch=master)](https://travis-ci.org/seven1m/bible_xml)
+
 This is a Ruby library for parsing different bible XML formats.
 
 For now, it supports USFX. But other formats are coming soon.
