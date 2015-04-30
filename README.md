@@ -1,6 +1,6 @@
 # BibleXML
 
-This is a library for parsing different bible XML formats.
+This is a Ruby library for parsing different bible XML formats.
 
 For now, it supports USFX. But other formats are coming soon.
 
