@@ -15,12 +15,93 @@ describe BibleXML do
     describe '#books' do
       let(:books) { subject.books }
 
-      it 'returns an enumerable of books' do
-        expect(books).to be_an(Enumerator)
+      it 'returns an array of all books' do
+        expect(books.size).to eq(2)
         genesis = books.first
         expect(genesis).to be_a(BibleXML::Book)
         expect(genesis.id).to eq('GEN')
         expect(books.to_a.size).to eq(2)
+      end
+    end
+
+    describe '#each_book' do
+      context 'without a block' do
+        let(:books) { subject.each_book }
+
+        it 'returns an enumerable of books' do
+          expect(books).to be_an(Enumerator)
+          genesis = books.first
+          expect(genesis).to be_a(BibleXML::Book)
+          expect(genesis.id).to eq('GEN')
+          expect(books.to_a.size).to eq(2)
+        end
+      end
+
+      context 'with a block' do
+        let(:books) { [] }
+
+        before do
+          subject.each_book do |book|
+            books << book
+          end
+        end
+
+        it 'yields to the block for each book' do
+          expect(books.size).to eq(2) # only 2 books in our sample
+          genesis = books.first
+          expect(genesis).to be_a(BibleXML::Book)
+          expect(genesis.id).to eq('GEN')
+        end
+      end
+    end
+
+    describe '#verses' do
+      let(:verses) { subject.verses }
+
+      it 'returns an array of all verses' do
+        expect(verses.size).to eq(2746) # only 2746 verses in our sample
+        gen1_1 = verses.first
+        expect(gen1_1).to be_a(BibleXML::Verse)
+        expect(gen1_1.num).to eq(1)
+        expect(gen1_1.chapter_num).to eq(1)
+        expect(gen1_1.book_num).to eq(1)
+        expect(gen1_1.book_id).to eq('GEN')
+      end
+    end
+
+    describe '#each_verse' do
+      context 'without a block' do
+        let(:verses) { subject.each_verse }
+
+        it 'returns an enumerable of verses' do
+          expect(verses).to be_an(Enumerable)
+          gen1_1 = verses.first
+          expect(gen1_1).to be_a(BibleXML::Verse)
+          expect(gen1_1.num).to eq(1)
+          expect(gen1_1.chapter_num).to eq(1)
+          expect(gen1_1.book_num).to eq(1)
+          expect(gen1_1.book_id).to eq('GEN')
+        end
+      end
+
+      context 'with a block' do
+        let(:verses) { [] }
+
+        before do
+          subject.each_verse do |verse|
+            verses << verse
+          end
+        end
+
+        it 'yields to the block for each verse' do
+          expect(verses.size).to eq(2746) # only 2746 verses in our sample
+          gen1_1 = verses.first
+          expect(gen1_1).to be_a(BibleXML::Verse)
+          expect(gen1_1.num).to eq(1)
+          expect(gen1_1.chapter_num).to eq(1)
+          expect(gen1_1.book_num).to eq(1)
+          expect(gen1_1.book_id).to eq('GEN')
+        end
       end
     end
   end

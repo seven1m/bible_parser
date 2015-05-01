@@ -11,11 +11,15 @@ class BibleXML
     end
 
     def each_verse(&block)
-      @parser.each_verse(book_id: book_id, chapter_num: num, &block)
+      if block
+        @parser.each_verse(book_id: book_id, chapter_num: num, &block)
+      else
+        enum_for(:each_verse)
+      end
     end
 
     def verses
-      enum_for(:each_verse)
+      each_verse.to_a
     end
 
     def book
@@ -27,8 +31,8 @@ class BibleXML
       )
     end
 
-    def ==(other_chapter)
-      book_id == other_chapter.book_id && num == other_chapter.num
+    def ==(other)
+      book_id == other.book_id && num == other.num
     end
 
     def inspect

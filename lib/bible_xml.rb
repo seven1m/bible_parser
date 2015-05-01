@@ -23,9 +23,30 @@ class BibleXML
     @format = format || detect_format
   end
 
-  def books
+  def each_book(&block)
     @io.rewind
-    parser.enum_for(:each_book)
+    if block
+      parser.each_book(&block)
+    else
+      parser.enum_for(:each_book)
+    end
+  end
+
+  def books
+    each_book.to_a
+  end
+
+  def each_verse(&block)
+    @io.rewind
+    if block
+      parser.each_verse(&block)
+    else
+      parser.enum_for(:each_verse)
+    end
+  end
+
+  def verses
+    each_verse.to_a
   end
 
   private

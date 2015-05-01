@@ -26,16 +26,46 @@ describe BibleXML::Chapter do
     end
   end
 
+  describe '#each_verse' do
+    context 'without a block' do
+      let(:verses) { subject.each_verse }
+      let(:first)  { verses.first }
+      let(:last)   { verses.to_a.last }
+
+      it 'returns an enumerable of verses for this chapter' do
+        expect(verses).to be_an(Enumerable)
+        expect(first).to be_a(BibleXML::Verse)
+        expect(first.num).to eq(1)
+        expect(last.num).to eq(25)
+      end
+    end
+
+    context 'with a block' do
+      let(:verses) { [] }
+
+      before do
+        subject.each_verse do |verse|
+          verses << verse
+        end
+      end
+
+      it 'returns an enumerable of verses for this chapter' do
+        expect(verses.size).to eq(25)
+        expect(verses.first).to be_a(BibleXML::Verse)
+        expect(verses.first.num).to eq(1)
+        expect(verses.last.num).to eq(25)
+      end
+    end
+  end
+
   describe '#verses' do
     let(:verses) { subject.verses }
-    let(:first)  { verses.first }
-    let(:last)   { verses.to_a.last }
 
-    it 'returns an enumerable of verses for this chapter' do
-      expect(verses).to be_an(Enumerable)
-      expect(first).to be_a(BibleXML::Verse)
-      expect(first.num).to eq(1)
-      expect(last.num).to eq(25)
+    it 'returns an array of all verses' do
+      expect(verses.size).to eq(25)
+      expect(verses.first).to be_a(BibleXML::Verse)
+      expect(verses.first.num).to eq(1)
+      expect(verses.last.num).to eq(25)
     end
   end
 end

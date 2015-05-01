@@ -10,15 +10,19 @@ class BibleXML
     end
 
     def each_chapter(&block)
-      @parser.each_chapter(book_id: id, &block)
+      if block
+        @parser.each_chapter(book_id: id, &block)
+      else
+        enum_for(:each_chapter)
+      end
     end
 
     def chapters
-      enum_for(:each_chapter)
+      each_chapter.to_a
     end
 
-    def ==(other_book)
-      id == other_book.id
+    def ==(other)
+      id == other.id
     end
 
     def inspect
