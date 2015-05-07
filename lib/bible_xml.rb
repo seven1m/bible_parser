@@ -56,7 +56,7 @@ class BibleXML
   end
 
   def parser_class
-    PARSERS[format] or fail(ParserUnavailableError, "Parser for #{format.inspect} could not be loaded.")
+    PARSERS[format] or fail(Errors::ParserUnavailableError, "Parser for #{format.inspect} could not be loaded.")
   end
 
   def detect_format
