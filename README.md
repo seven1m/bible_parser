@@ -4,7 +4,7 @@
 
 This is a Ruby library for parsing different bible XML formats.
 
-For now, it supports USFX. But other formats are coming soon.
+For now, it only supports USFX and OSIS, but I hope to add support for other formats also.
 
 ## Install
 
