@@ -10,4 +10,5 @@ Gem::Specification.new do |s|
   s.has_rdoc     = true
   s.add_dependency("nokogiri", ">= 1.6.0")
   s.add_development_dependency("rspec", "3.2.0")
+  s.add_development_dependency("pry")
 end
