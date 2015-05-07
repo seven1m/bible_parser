@@ -16,7 +16,7 @@ gem install bible_xml
 
 ## Use
 
-You can get the World English Bible (WEB) in USFX format [here](http://ebible.org/web/). Unzip and put the usfx.xml file somewhere.
+You can get the a bible in XML format [here](https://github.com/seven1m/open-bibles).
 
 ```ruby
 require 'bible_xml'
