@@ -1,9 +1,9 @@
 class BibleXML
   module Parsers
-    module USFX
+    module OSIS
       class Parser < Base::Parser
         def valid?
-          (@io.read(1024) =~ /<usfx.*>/i).tap do
+          (@io.read(1024) =~ /<osis.*>/i).tap do
             @io.rewind
           end
         end

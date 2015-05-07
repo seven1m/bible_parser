@@ -60,6 +60,9 @@ class BibleXML
   end
 
   def detect_format
-    @format = 'USFX'
+    PARSERS.each do |name, parser|
+      @io.rewind
+      return name if parser.new(@io).valid?
+    end
   end
 end

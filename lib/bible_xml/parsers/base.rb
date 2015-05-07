@@ -3,9 +3,7 @@ require_relative 'base/document'
 
 class BibleXML
   module Parsers
-    module USFX
-      class Parser < Base::Parser
-      end
+    module Base
     end
   end
 end

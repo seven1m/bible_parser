@@ -54,6 +54,7 @@ class BibleXML
         end
 
         def end_book_title
+          @book_title.strip! if @book_title
           @mode = nil
         end
 

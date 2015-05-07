@@ -5,7 +5,7 @@ describe BibleXML::Chapter do
   let(:file)   { File.open(path) }
   let(:parser) { BibleXML::Parsers::USFX::Parser.new(file) }
 
-  subject { described_class.new(book_id: 'EXO', book_num: 2, book_title: 'Exodus', num: 2, parser: parser) }
+  subject { described_class.new(book_id: 'EXO', book_num: 2, book_title: 'Exodus', num: 1, parser: parser) }
 
   describe '#book_id' do
     it 'returns the book id' do
@@ -36,7 +36,7 @@ describe BibleXML::Chapter do
         expect(verses).to be_an(Enumerable)
         expect(first).to be_a(BibleXML::Verse)
         expect(first.num).to eq(1)
-        expect(last.num).to eq(25)
+        expect(last.num).to eq(2)
       end
     end
 
@@ -50,10 +50,10 @@ describe BibleXML::Chapter do
       end
 
       it 'returns an enumerable of verses for this chapter' do
-        expect(verses.size).to eq(25)
+        expect(verses.size).to eq(2)
         expect(verses.first).to be_a(BibleXML::Verse)
         expect(verses.first.num).to eq(1)
-        expect(verses.last.num).to eq(25)
+        expect(verses.last.num).to eq(2)
       end
     end
   end
@@ -62,10 +62,10 @@ describe BibleXML::Chapter do
     let(:verses) { subject.verses }
 
     it 'returns an array of all verses' do
-      expect(verses.size).to eq(25)
+      expect(verses.size).to eq(2)
       expect(verses.first).to be_a(BibleXML::Verse)
       expect(verses.first.num).to eq(1)
-      expect(verses.last.num).to eq(25)
+      expect(verses.last.num).to eq(2)
     end
   end
 end

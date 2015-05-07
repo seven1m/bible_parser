@@ -8,6 +8,10 @@ class BibleXML
           @io = io
         end
 
+        def valid?
+          fail NotImplementedError, "override #valid? in your Parser class"
+        end
+
         def document_class
           module_name = self.class.name.sub(/::Parser$/, '')
           Kernel.const_get("#{module_name}::Document")

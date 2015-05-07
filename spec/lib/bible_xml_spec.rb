@@ -20,7 +20,13 @@ describe BibleXML do
         genesis = books.first
         expect(genesis).to be_a(BibleXML::Book)
         expect(genesis.id).to eq('GEN')
+        expect(genesis.title).to eq('Genesis')
         expect(books.to_a.size).to eq(2)
+      end
+
+      it 'parses chapters for each book' do
+        genesis = books.first
+        expect(genesis.chapters.size).to eq(1)
       end
     end
 
@@ -59,7 +65,7 @@ describe BibleXML do
       let(:verses) { subject.verses }
 
       it 'returns an array of all verses' do
-        expect(verses.size).to eq(2746) # only 2746 verses in our sample
+        expect(verses.size).to eq(4) # only 4 verses in our sample
         gen1_1 = verses.first
         expect(gen1_1).to be_a(BibleXML::Verse)
         expect(gen1_1.num).to eq(1)
@@ -94,7 +100,7 @@ describe BibleXML do
         end
 
         it 'yields to the block for each verse' do
-          expect(verses.size).to eq(2746) # only 2746 verses in our sample
+          expect(verses.size).to eq(4) # only 4 verses in our sample
           gen1_1 = verses.first
           expect(gen1_1).to be_a(BibleXML::Verse)
           expect(gen1_1.num).to eq(1)
@@ -102,6 +108,50 @@ describe BibleXML do
           expect(gen1_1.book_num).to eq(1)
           expect(gen1_1.book_id).to eq('GEN')
         end
+      end
+    end
+  end
+
+  context 'given a OSIS formatted file' do
+    let(:path) { fixture_path('kjv.osis.truncated.xml') }
+
+    subject { BibleXML.new(File.open(path)) }
+
+    describe '#format' do
+      it 'returns "OSIS"' do
+        expect(subject.format).to eq('OSIS')
+      end
+    end
+
+    describe '#books' do
+      let(:books) { subject.books }
+
+      it 'returns an array of all books' do
+        expect(books.size).to eq(2)
+        genesis = books.first
+        expect(genesis).to be_a(BibleXML::Book)
+        expect(genesis.id).to eq('GEN')
+        expect(genesis.title).to eq('Genesis')
+        expect(books.to_a.size).to eq(2)
+      end
+
+      it 'parses chapters for each book' do
+        genesis = books.first
+        expect(genesis.chapters.size).to eq(1)
+      end
+    end
+
+    describe '#verses' do
+      let(:verses) { subject.verses }
+
+      it 'returns an array of all verses' do
+        expect(verses.size).to eq(5) # only 5 verses in our sample
+        gen1_1 = verses.first
+        expect(gen1_1).to be_a(BibleXML::Verse)
+        expect(gen1_1.num).to eq(1)
+        expect(gen1_1.chapter_num).to eq(1)
+        expect(gen1_1.book_num).to eq(1)
+        expect(gen1_1.book_id).to eq('GEN')
       end
     end
   end

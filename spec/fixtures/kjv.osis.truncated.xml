@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osis xmlns='http://www.bibletechnologies.net/2003/OSIS/namespace' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.bibletechnologies.net/2003/OSIS/namespace http://www.bibletechnologies.net/osisCore.2.1.1.xsd'>
+  <osisText osisIDWork='Bible.en.kjv' osisRefWork='bible' xml:lang='en' canonical='true'>
+    <header>
+      <revisionDesc>
+        <date>2013.07.12T21.38.21</date>
+        <p>
+          This Modified OSIS file was generated from a USFX source as part of
+          the process to convert to a SWORD module using Haiola open source
+          software from http://haiola.org. Some non-canonical parts of the USFX
+          source file that are not currently supported by The Sword Project
+          (http://crosswire.org) were stripped out, as were some of the pure
+          presentational elements that make no sense in a Bible study program,
+          but the canonical Scripture text and punctuation remain. Sometimes
+          more than one source format markup was mapped to the same OSIS markup,
+          which may result in some minor formatting changes. The usage of the
+          &lt;q&gt; element in this file is not compliant with the OSIS User
+          Manual in that &lt;q&gt; markup is stopped and restarted at all verse
+          boundaries, and NEVER intended to trigger generation of any
+          punctuation. ALL correct punctuation for quotations for this language,
+          dialect, and translation style, if any, are already in the text of the
+          Scriptures. This is why the n attribute of &lt;q&gt; is always the
+          empty string. Because of these limitations, this file may be good to
+          include in archives, BUT not to the exclusion of the source USFM,
+          USFX, or USX file(s) from which this Modified OSIS file was generated.
+
+        </p>
+      </revisionDesc>
+      <revisionDesc>
+        <date>2013.07.08</date>
+        <p>created or updated OSIS file contents</p>
+      </revisionDesc>
+      <work osisWork='Bible.en.kjv'>
+        <title type='x-vernacular'>King James Version</title>
+        <description type='x-english'>
+          The King James Version or Authorized Version of the Holy Bible, using
+          the standardized text of 1769, with Apocrypha/Deuterocanon
+        </description>
+        <publisher type='x-print'>Cambridge University Press, Oxford University Press, Collins, etc.</publisher>
+        <publisher type='x-electronic'>eBible.org</publisher>
+        <identifier type='x-ebible-id'>eng-kjv</identifier>
+        <language type='x-ethnologue'>eng</language>
+        <language type='x-in-english'>17th century England dialect of English</language>
+        <language type='x-vernacular'>English</language>
+        <rights type='x-copyright'>public domain</rights>
+        <rights type='x-license'>
+          This work is in the Public Domain. That means that it is not
+          copyrighted. It is still subject to God's Law concerning His Word,
+          including the Great Commission (Matthew 28:18-20). A United Kingdom
+          Crown Copyright with no expiration date means that to print this
+          translation in the United Kingdom, you need letters patent. Currently,
+          the Cambridge University Press, the Oxford University Press, and
+          Collins have the exclusive right to print this Bible translation in
+          the UK. This Crown Copyright has no effect outside of the UK, where
+          this work is firmly in the Public Domain.
+        </rights>
+        <refSystem>Bible</refSystem>
+      </work>
+      <work osisWork='bible'>
+        <type type='OSIS'>Bible</type>
+        <refSystem>Bible</refSystem>
+      </work>
+    </header>
+    <div type='bookGroup' canonical='true'>
+      <title>Old Testament</title>
+      <div type='book' osisID='Gen' canonical='true'>
+        <title type='main' short='Genesis'>The First Book of Moses, called Genesis</title>
+        <chapter osisRef='Gen.1' sID='Gen.1.seID.00001' n='1'/>
+        <p>
+          <verse osisID='Gen.1.1' sID='Gen.1.1.seID.00002' n='1'/>
+          In the beginning God created the heaven and the earth.
+          <verse eID='Gen.1.1.seID.00002'/>
+          <verse osisID='Gen.1.2' sID='Gen.1.2.seID.00003' n='2'/>
+          And the earth was without form, and void; and darkness
+          <transChange type='added'>was </transChange>
+           upon the face of the deep. And the Spirit of God moved upon the face
+          of the waters.
+          <verse eID='Gen.1.2.seID.00003'/>
+        </p>
+        <p>
+          <verse osisID='Gen.1.3' sID='Gen.1.3.seID.00004' n='3'/>
+          And God said, Let there be light: and there was light.
+          <verse eID='Gen.1.3.seID.00004'/>
+        </p>
+        <chapter eID='Gen.1.seID.01557'/>
+      </div>
+      <div type='book' osisID='Exod' canonical='true'>
+        <title type='main' short='Exodus'>The Second Book of Moses, called Exodus</title>
+        <chapter osisRef='Exod.1' sID='Exod.1.seID.01584' n='1'/>
+        <p>
+          <verse osisID='Exod.1.1' sID='Exod.1.1.seID.01585' n='1'/>
+          Now these
+          <transChange type='added'>are</transChange>
+           the names of the children of Israel, which came into Egypt; every man
+          and his household came with Jacob.
+          <verse eID='Exod.1.1.seID.01585'/>
+          <verse osisID='Exod.1.2' sID='Exod.1.2.seID.01586' n='2'/>
+          Reuben, Simeon, Levi, and Judah,
+          <verse eID='Exod.1.2.seID.01586'/>
+        </p>
+        <chapter eID='Rev.22.seID.40237'/>
+      </div>
+    </div>
+  </osisText>
+</osis>
