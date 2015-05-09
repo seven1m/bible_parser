@@ -100,6 +100,19 @@
         </p>
         <chapter eID='Rev.22.seID.40237'/>
       </div>
+      <div type="book" osisID="Judg" canonical="true">
+        <title type="main" short="Judges">The Book of Judges</title>
+        <chapter osisRef="Judg.1" sID="Judg.1.seID.06722" n="1" />
+        <p>
+          <verse osisID="Judg.1.1" sID="Judg.1.1.seID.06723" n="1" />
+          Now after the death of Joshua it came to pass, that the children of Israel asked the LORD, saying, Who shall go up for us against the Canaanites first, to fight against them?
+          <verse eID="Judg.1.1.seID.06723" />
+          <verse osisID="Judg.1.2" sID="Judg.1.2.seID.06724" n="2" />
+          And the LORD said, Judah shall go up: behold, I have delivered the land into his hand.
+          <verse eID="Judg.1.2.seID.06724" />
+        </p>
+        <chapter eID='Rev.22.seID.40237'/>
+      </div>
     </div>
   </osisText>
 </osis>

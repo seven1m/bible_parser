@@ -1,9 +1,11 @@
-require 'nokogiri'
+require_relative 'book_ids'
 
 class BibleXML
   module Parsers
     module OSIS
       class Document < Base::Document
+        include BookIDs
+
         def start_element(name, attributes)
           case name
           when 'div'
@@ -35,7 +37,7 @@ class BibleXML
           return unless attributes['type'] == 'book'
           id = attributes['osisID']
           @book_num += 1
-          @book_id = id.upcase[0..2]
+          @book_id = BOOK_IDS[id] || id.upcase[0..2]
           @mode = 'book'
           @book_title = nil
         end

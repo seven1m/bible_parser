@@ -127,17 +127,20 @@ describe BibleXML do
       let(:books) { subject.books }
 
       it 'returns an array of all books' do
-        expect(books.size).to eq(2)
+        expect(books.size).to eq(3)
         genesis = books.first
         expect(genesis).to be_a(BibleXML::Book)
         expect(genesis.id).to eq('GEN')
         expect(genesis.title).to eq('Genesis')
-        expect(books.to_a.size).to eq(2)
       end
 
       it 'parses chapters for each book' do
         genesis = books.first
         expect(genesis.chapters.size).to eq(1)
+      end
+
+      it 'returns proper book ids' do
+        expect(books.last.id).to eq('JDG')
       end
     end
 
@@ -145,7 +148,7 @@ describe BibleXML do
       let(:verses) { subject.verses }
 
       it 'returns an array of all verses' do
-        expect(verses.size).to eq(5) # only 5 verses in our sample
+        expect(verses.size).to eq(7) # only 7 verses in our sample
         gen1_1 = verses.first
         expect(gen1_1).to be_a(BibleXML::Verse)
         expect(gen1_1.num).to eq(1)
