@@ -38,5 +38,14 @@ class BibleXML
     def inspect
       "<#{book_title} #{num}>"
     end
+
+    def to_h
+      {
+        num:         num,
+        book_id:     book_id,
+        book_num:    book_num,
+        book_title:  book_title
+      }
+    end
   end
 end

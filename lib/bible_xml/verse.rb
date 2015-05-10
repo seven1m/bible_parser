@@ -34,5 +34,16 @@ class BibleXML
         parser: @parser
       )
     end
+
+    def to_h
+      {
+        num:         num,
+        book_id:     book_id,
+        book_num:    book_num,
+        book_title:  book_title,
+        chapter_num: chapter_num,
+        text:        text
+      }
+    end
   end
 end
