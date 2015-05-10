@@ -1,4 +1,4 @@
-require_relative '../lib/bible_xml'
+require_relative '../lib/bible_parser'
 
 RSpec.configure do |config|
   config.mock_with :rspec

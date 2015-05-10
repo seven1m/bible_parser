@@ -1,8 +1,8 @@
-require_relative 'bible_xml/parsers'
-require_relative 'bible_xml/errors'
-require_relative 'bible_xml/book'
-require_relative 'bible_xml/chapter'
-require_relative 'bible_xml/verse'
+require_relative 'bible_parser/parsers'
+require_relative 'bible_parser/errors'
+require_relative 'bible_parser/book'
+require_relative 'bible_parser/chapter'
+require_relative 'bible_parser/verse'
 
 require 'stringio'
 

@@ -1,6 +1,6 @@
-# BibleXML
+# BibleParser
 
-[![Build Status](https://travis-ci.org/seven1m/bible_xml.svg?branch=master)](https://travis-ci.org/seven1m/bible_xml)
+[![Build Status](https://travis-ci.org/seven1m/bible_parser.svg?branch=master)](https://travis-ci.org/seven1m/bible_parser)
 
 This is a Ruby library for parsing different bible XML formats.
 
@@ -11,7 +11,7 @@ For now, it only supports USFX and OSIS, but I hope to add support for other for
 When the library is ready, I'll publish the gem and you'll be able to:
 
 ```
-gem install bible_xml
+gem install bible_parser
 ```
 
 ## Use
@@ -19,9 +19,9 @@ gem install bible_xml
 You can get the a bible in XML format [here](https://github.com/seven1m/open-bibles).
 
 ```ruby
-require 'bible_xml'
+require 'bible_parser'
 
-bible = BibleXML.new(File.open('web.usfx.xml'))
+bible = BibleParser.new(File.open('web.usfx.xml'))
 verse = bible.books.first.chapters.first.verses.first
 # => <Genesis 1:1>
 verse.text
