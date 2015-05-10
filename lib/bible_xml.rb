@@ -6,7 +6,7 @@ require_relative 'bible_xml/verse'
 
 require 'stringio'
 
-class BibleXML
+class BibleParser
   attr_reader :format
 
   def initialize(io, format: nil)

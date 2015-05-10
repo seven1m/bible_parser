@@ -1,4 +1,4 @@
-class BibleXML
+class BibleParser
   module Parsers
     module OSIS
       class Parser < Base::Parser

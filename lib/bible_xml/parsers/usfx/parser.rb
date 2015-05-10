@@ -1,4 +1,4 @@
-class BibleXML
+class BibleParser
   module Parsers
     module USFX
       class Parser < Base::Parser

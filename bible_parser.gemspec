@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
-  s.name         = "bible_xml"
-  s.version      = "0.1.0"
+  s.name         = "bible_parser"
+  s.version      = "1.0.0"
   s.author       = "Tim Morgan"
   s.email        = "tim@timmorgan.org"
-  s.homepage     = "https://github.com/seven1m/bible_xml"
-  s.summary      = "Library for importing the bible in various xml formats"
+  s.homepage     = "https://github.com/seven1m/bible_parser"
+  s.summary      = "Library for parsing the bible in various formats"
   s.files        = %w(README.md) + Dir['lib/**/*'].to_a
   s.require_path = "lib"
   s.has_rdoc     = true

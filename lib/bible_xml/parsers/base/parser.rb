@@ -1,6 +1,6 @@
 require 'nokogiri'
 
-class BibleXML
+class BibleParser
   module Parsers
     module Base
       class Parser

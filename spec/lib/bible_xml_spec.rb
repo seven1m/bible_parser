@@ -1,10 +1,10 @@
 require_relative '../spec_helper'
 
-describe BibleXML do
+describe BibleParser do
   context 'given a USFX formatted file' do
     let(:path) { fixture_path('web.usfx.truncated.xml') }
 
-    subject { BibleXML.new(File.open(path)) }
+    subject { BibleParser.new(File.open(path)) }
 
     describe '#format' do
       it 'returns "USFX"' do
@@ -18,7 +18,7 @@ describe BibleXML do
       it 'returns an array of all books' do
         expect(books.size).to eq(2)
         genesis = books.first
-        expect(genesis).to be_a(BibleXML::Book)
+        expect(genesis).to be_a(BibleParser::Book)
         expect(genesis.id).to eq('GEN')
         expect(genesis.title).to eq('Genesis')
         expect(books.to_a.size).to eq(2)
@@ -37,7 +37,7 @@ describe BibleXML do
         it 'returns an enumerable of books' do
           expect(books).to be_an(Enumerator)
           genesis = books.first
-          expect(genesis).to be_a(BibleXML::Book)
+          expect(genesis).to be_a(BibleParser::Book)
           expect(genesis.id).to eq('GEN')
           expect(books.to_a.size).to eq(2)
         end
@@ -55,7 +55,7 @@ describe BibleXML do
         it 'yields to the block for each book' do
           expect(books.size).to eq(2) # only 2 books in our sample
           genesis = books.first
-          expect(genesis).to be_a(BibleXML::Book)
+          expect(genesis).to be_a(BibleParser::Book)
           expect(genesis.id).to eq('GEN')
         end
       end
@@ -67,7 +67,7 @@ describe BibleXML do
       it 'returns an array of all verses' do
         expect(verses.size).to eq(4) # only 4 verses in our sample
         gen1_1 = verses.first
-        expect(gen1_1).to be_a(BibleXML::Verse)
+        expect(gen1_1).to be_a(BibleParser::Verse)
         expect(gen1_1.num).to eq(1)
         expect(gen1_1.chapter_num).to eq(1)
         expect(gen1_1.book_num).to eq(1)
@@ -82,7 +82,7 @@ describe BibleXML do
         it 'returns an enumerable of verses' do
           expect(verses).to be_an(Enumerable)
           gen1_1 = verses.first
-          expect(gen1_1).to be_a(BibleXML::Verse)
+          expect(gen1_1).to be_a(BibleParser::Verse)
           expect(gen1_1.num).to eq(1)
           expect(gen1_1.chapter_num).to eq(1)
           expect(gen1_1.book_num).to eq(1)
@@ -102,7 +102,7 @@ describe BibleXML do
         it 'yields to the block for each verse' do
           expect(verses.size).to eq(4) # only 4 verses in our sample
           gen1_1 = verses.first
-          expect(gen1_1).to be_a(BibleXML::Verse)
+          expect(gen1_1).to be_a(BibleParser::Verse)
           expect(gen1_1.num).to eq(1)
           expect(gen1_1.chapter_num).to eq(1)
           expect(gen1_1.book_num).to eq(1)
@@ -115,7 +115,7 @@ describe BibleXML do
   context 'given a OSIS formatted file' do
     let(:path) { fixture_path('kjv.osis.truncated.xml') }
 
-    subject { BibleXML.new(File.open(path)) }
+    subject { BibleParser.new(File.open(path)) }
 
     describe '#format' do
       it 'returns "OSIS"' do
@@ -129,7 +129,7 @@ describe BibleXML do
       it 'returns an array of all books' do
         expect(books.size).to eq(3)
         genesis = books.first
-        expect(genesis).to be_a(BibleXML::Book)
+        expect(genesis).to be_a(BibleParser::Book)
         expect(genesis.id).to eq('GEN')
         expect(genesis.title).to eq('Genesis')
       end
@@ -150,7 +150,7 @@ describe BibleXML do
       it 'returns an array of all verses' do
         expect(verses.size).to eq(7) # only 7 verses in our sample
         gen1_1 = verses.first
-        expect(gen1_1).to be_a(BibleXML::Verse)
+        expect(gen1_1).to be_a(BibleParser::Verse)
         expect(gen1_1.num).to eq(1)
         expect(gen1_1.chapter_num).to eq(1)
         expect(gen1_1.book_num).to eq(1)

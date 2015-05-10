@@ -1,9 +1,9 @@
 require_relative '../../spec_helper'
 
-describe BibleXML::Chapter do
+describe BibleParser::Chapter do
   let(:path)   { fixture_path('web.usfx.truncated.xml') }
   let(:file)   { File.open(path) }
-  let(:parser) { BibleXML::Parsers::USFX::Parser.new(file) }
+  let(:parser) { BibleParser::Parsers::USFX::Parser.new(file) }
 
   subject { described_class.new(book_id: 'EXO', book_num: 2, book_title: 'Exodus', num: 1, parser: parser) }
 
@@ -16,7 +16,7 @@ describe BibleXML::Chapter do
   describe '#book' do
     it 'returns a book instance' do
       expect(subject.book).to eq(
-        BibleXML::Book.new(
+        BibleParser::Book.new(
           id: 'EXO',
           num: 2,
           title: 'Exodus',
@@ -34,7 +34,7 @@ describe BibleXML::Chapter do
 
       it 'returns an enumerable of verses for this chapter' do
         expect(verses).to be_an(Enumerable)
-        expect(first).to be_a(BibleXML::Verse)
+        expect(first).to be_a(BibleParser::Verse)
         expect(first.num).to eq(1)
         expect(last.num).to eq(2)
       end
@@ -51,7 +51,7 @@ describe BibleXML::Chapter do
 
       it 'returns an enumerable of verses for this chapter' do
         expect(verses.size).to eq(2)
-        expect(verses.first).to be_a(BibleXML::Verse)
+        expect(verses.first).to be_a(BibleParser::Verse)
         expect(verses.first.num).to eq(1)
         expect(verses.last.num).to eq(2)
       end
@@ -63,7 +63,7 @@ describe BibleXML::Chapter do
 
     it 'returns an array of all verses' do
       expect(verses.size).to eq(2)
-      expect(verses.first).to be_a(BibleXML::Verse)
+      expect(verses.first).to be_a(BibleParser::Verse)
       expect(verses.first.num).to eq(1)
       expect(verses.last.num).to eq(2)
     end

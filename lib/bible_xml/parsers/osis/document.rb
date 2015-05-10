@@ -1,6 +1,6 @@
 require_relative 'book_ids'
 
-class BibleXML
+class BibleParser
   module Parsers
     module OSIS
       class Document < Base::Document

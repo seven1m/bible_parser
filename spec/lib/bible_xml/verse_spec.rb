@@ -1,9 +1,9 @@
 require_relative '../../spec_helper'
 
-describe BibleXML::Verse do
+describe BibleParser::Verse do
   let(:path)   { fixture_path('web.usfx.truncated.xml') }
   let(:file)   { File.open(path) }
-  let(:parser) { BibleXML::Parsers::USFX::Parser.new(file) }
+  let(:parser) { BibleParser::Parsers::USFX::Parser.new(file) }
 
   subject do
     described_class.new(
@@ -32,7 +32,7 @@ describe BibleXML::Verse do
   describe '#book' do
     it 'returns a book instance' do
       expect(subject.book).to eq(
-        BibleXML::Book.new(
+        BibleParser::Book.new(
           id: 'EXO',
           num: 2,
           title: 'Exodus',
@@ -45,7 +45,7 @@ describe BibleXML::Verse do
   describe '#chapter' do
     it 'returns a chapter instance' do
       expect(subject.chapter).to eq(
-        BibleXML::Chapter.new(
+        BibleParser::Chapter.new(
           book_id: 'EXO',
           book_num: 2,
           book_title: 'Exodus',

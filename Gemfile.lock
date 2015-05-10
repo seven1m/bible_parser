@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bible_xml (0.1.0)
+    bible_parser (1.0.0)
       nokogiri (>= 1.6.0)
 
 GEM
@@ -36,6 +36,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bible_xml!
+  bible_parser!
   pry
   rspec (= 3.2.0)

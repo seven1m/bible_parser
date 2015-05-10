@@ -1,4 +1,4 @@
-class BibleXML
+class BibleParser
   class Chapter
     attr_reader :num, :book_id, :book_num, :book_title
 
