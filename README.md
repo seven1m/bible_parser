@@ -8,8 +8,6 @@ For now, it only supports USFX and OSIS, but I hope to add support for other for
 
 ## Install
 
-When the library is ready, I'll publish the gem and you'll be able to:
-
 ```
 gem install bible_parser
 ```
