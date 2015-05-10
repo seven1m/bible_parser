@@ -13,8 +13,13 @@ class BibleXML
     end
 
     def inspect
-      "<#{book_title} #{chapter_num}:#{num}>"
+      "<#{to_s}>"
     end
+
+    def to_s
+      "#{book_title} #{chapter_num}:#{num}"
+    end
+
 
     def book
       Book.new(

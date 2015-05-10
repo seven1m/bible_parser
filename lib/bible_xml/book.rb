@@ -26,8 +26,10 @@ class BibleXML
     end
 
     def inspect
-      "<#{title}>"
+      "<#{to_s}>"
     end
+
+    alias_method :to_s, :title
 
     def to_h
       {
