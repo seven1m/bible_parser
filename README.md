@@ -1,6 +1,6 @@
 # BibleParser
 
-[![Build Status](https://travis-ci.org/seven1m/bible_parser.svg?branch=master)](https://travis-ci.org/seven1m/bible_parser)
+[![Build Status](https://travis-ci.org/churchio/bible_parser.svg?branch=master)](https://travis-ci.org/churchio/bible_parser)
 
 This is a Ruby library for parsing different bible XML formats.
 
@@ -14,7 +14,7 @@ gem install bible_parser
 
 ## Use
 
-You can get the a bible in XML format [here](https://github.com/seven1m/open-bibles).
+You can get the a bible in XML format [here](https://github.com/churchio/open-bibles).
 
 ```ruby
 require 'bible_parser'
