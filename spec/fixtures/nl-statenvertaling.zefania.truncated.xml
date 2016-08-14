@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Visit the online documentation for Zefania XML Markup-->
+<!--http://bgfdb.de/zefaniaxml/bml/-->
+<!--Download another Zefania XML files from-->
+<!--http://sourceforge.net/projects/zefania-sharp-->
+<XMLBIBLE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="zef2005.xsd" version="2.0.1.18" status="v" biblename="Dutch Statenvertaling" type="x-bible" revision="0">
+  <INFORMATION>
+    <title>Dutch Statenvertaling</title>
+    <creator>
+    </creator>
+    <subject>The Holy Bible</subject>
+    <description>DOOR LAST VAN DE HOOG-MOGENDE HEREN STATEN-GENERAAL DER VERENIGDE NEDERLANDEN EN VOLGENS HET BESLUIT VAN DE SYNODE NATIONAAL GEHOUDEN TE DORDRECHT IN DE JAREN 1618 EN 1619 UIT DE OORSPRONKELIJKE TALEN IN ONZE NEDERLANDSE TAAL GETROUWELIJK OVERGEZET.</description>
+    <format>Zefania XML Bible Markup Language</format>
+    <identifier>DUTV</identifier>
+    <language>NL</language>
+    <rights>
+    </rights>
+    <contributors />
+    <publisher />
+    <date>2009-01-20</date>
+    <type />
+    <source />
+    <coverage />
+  </INFORMATION>
+  <BIBLEBOOK bnumber="1" bname="1 Mose" bsname="1Mo">
+    <CHAPTER cnumber="1">
+      <VERS vnumber="1">In den beginne schiep God den hemel en de aarde.</VERS>
+      <VERS vnumber="2">De aarde nu was woest en ledig, en duisternis was op den afgrond; en de Geest Gods zweefde op de wateren.</VERS>
+      <VERS vnumber="3">En God zeide: Daar zij licht! en daar werd licht.</VERS>
+    </CHAPTER>
+  </BIBLEBOOK>
+  <BIBLEBOOK bnumber="2" bname="2 Mose" bsname="2Mo">
+    <CHAPTER cnumber="1">
+      <VERS vnumber="1">Dit nu zijn de namen der zonen van Israel, die in Egypte gekomen zijn, met Jakob; zij kwamen er in, elk met zijn huis.</VERS>
+      <VERS vnumber="2">Ruben, Simeon, Levi, en Juda;</VERS>
+    </CHAPTER>
+  </BIBLEBOOK>
+  <BIBLEBOOK bnumber="7" bname="Richter" bsname="Ri">
+    <CHAPTER cnumber="1">
+      <VERS vnumber="1">En het geschiedde na den dood van Jozua, dat de kinderen Israels den HEERE vraagden, zeggende: Wie zal onder ons het eerst optrekken naar de Kanaanieten, om tegen hen te krijgen?</VERS>
+      <VERS vnumber="2">En de HEERE zeide: Juda zal optrekken; ziet, Ik heb dat land in zijn hand gegeven.</VERS>
+    </CHAPTER>
+  </BIBLEBOOK>
+</XMLBIBLE>
