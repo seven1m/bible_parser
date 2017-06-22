@@ -28,4 +28,4 @@ verse.text
 
 ## License
 
-Copyright (c) 2015 Tim Morgan. Licensed MIT. See LICENSE file.
+Copyright (c) Tim Morgan. Licensed MIT. See LICENSE file.
