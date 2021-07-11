@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name         = "bible_parser"
-  s.version      = "1.1.0"
+  s.version      = "1.1.1"
   s.author       = "Tim Morgan"
   s.email        = "tim@timmorgan.org"
   s.homepage     = "https://github.com/seven1m/bible_parser"
