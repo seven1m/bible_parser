@@ -4,7 +4,11 @@
 
 This is a Ruby library for parsing different bible XML formats.
 
-For now, it only supports USFX, OSIS and Zefania, but I hope to add support for other formats also.
+We currently support:
+
+- USFX (for USFM, see 'Other Tools' below)
+- OSIS
+- Zefania
 
 ## Install
 
@@ -14,7 +18,7 @@ gem install bible_parser
 
 ## Use
 
-You can get the a bible in XML format [here](https://github.com/seven1m/open-bibles).
+You can get a bible version in XML format [here](https://github.com/seven1m/open-bibles).
 
 ```ruby
 require 'bible_parser'
@@ -29,3 +33,7 @@ verse.text
 ## License
 
 Copyright (c) Tim Morgan. Licensed MIT. See LICENSE file.
+
+## Other Tools
+
+- [u2o](https://github.com/adyeths/u2o) - Python script to convert from USFM (a format our library does not support) to OSIS (an XML format we do support)
