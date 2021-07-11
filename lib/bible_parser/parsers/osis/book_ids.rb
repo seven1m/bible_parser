@@ -59,7 +59,6 @@ class BibleParser
           '1Esd'   => '1ES',
           '2Esd'   => '2ES',
           'PrMan'  => 'MAN',
-          '2Esd'   => 'PS2',
           'Matt'   => 'MAT',
           'Mark'   => 'MRK',
           'Luke'   => 'LUK',

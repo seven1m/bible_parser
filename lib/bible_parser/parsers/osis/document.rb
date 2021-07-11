@@ -11,6 +11,8 @@ class BibleParser
           when 'div'
             end_verse if @mode == 'verse'
             start_book(attributes)
+          when 'milestone'
+            set_book_title_from_milestone(attributes)
           when 'title'
             set_book_title(attributes)
           when 'chapter'
@@ -43,9 +45,15 @@ class BibleParser
         end
 
         def set_book_title(attributes)
+          return if @book_title
           attributes = Hash[attributes]
           return unless attributes['type'] == 'main'
           @book_title = attributes['short']
+        end
+
+        def set_book_title_from_milestone(attributes)
+          attributes = Hash[attributes]
+          @book_title = attributes['n']
         end
 
         def end_book_title
