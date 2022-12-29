@@ -1,3 +1,4 @@
+require 'pry'
 require_relative '../lib/bible_parser'
 
 RSpec.configure do |config|
