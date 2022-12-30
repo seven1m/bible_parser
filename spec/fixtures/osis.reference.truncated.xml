@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<osis xmlns="http://www.bibletechnologies.net/2003/OSIS/namespace"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.bibletechnologies.net/2003/OSIS/namespace
+        http://www.bibletechnologies.net/osisCore.2.1.1.xsd">
+    <osisText osisIDWork="BSBJohn" osisRefWork="Bible" xml:lang="und">
+<div type="book" osisID="1John" canonical="true">
+<milestone type="x-usfm-h" n="1 John" />
+<milestone type="x-usfm-toc1" n="1 John" />
+<!-- mt1 --><title level="1" type="main">1 John</title>
+<chapter sID="1John.1" osisID="1John.1" n="1" /><p type="x-noindent">
+<verse sID="1John.1.1" osisID="1John.1.1" n="1" />That which was from the beginning, which we have heard, which we have seen with our own eyes, which we have gazed upon and touched with our own hands—this is the Word of life.
+<verse eID="1John.1.1" />
+<verse sID="1John.1.2" osisID="1John.1.2" n="2" />And this is the life that was revealed; we have seen it and testified to it, and we proclaim to you the eternal life that was with the Father and was revealed to us.
+<verse eID="1John.1.2" />
+</p>
+<p type="x-noindent">
+<verse sID="1John.1.3" osisID="1John.1.3" n="3" />We proclaim to you what we have seen and heard, so that you also may have fellowship with us. And this fellowship of ours is with the Father and with His Son, Jesus Christ.
+<verse eID="1John.1.3" />
+<verse sID="1John.1.4" osisID="1John.1.4" n="4" />We write these things so that our<note placement="foot"><reference type="annotateRef">1:4 </reference>BYZ and TR your</note> joy may be complete.
+<verse eID="1John.1.4" />
+</p>
+<p type="x-noindent">
+<verse sID="1John.1.5" osisID="1John.1.5" n="5" />And this is the message we have heard from Him and announce to you: God is light, and in Him there is no darkness at all.
+<verse eID="1John.1.5" />
+<verse sID="1John.1.6" osisID="1John.1.6" n="6" />If we say we have fellowship with Him yet walk in the darkness, we lie and do not practice the truth.
+<verse eID="1John.1.6" />
+<verse sID="1John.1.7" osisID="1John.1.7" n="7" />But<note placement="foot"><reference type="annotateRef">1:7 </reference>NA does not include But.</note> if we walk in the light as He is in the light, we have fellowship with one another, and the blood of Jesus His Son cleanses us from all sin.
+<verse eID="1John.1.7" />
+</p>
+<p type="x-noindent">
+<verse sID="1John.1.8" osisID="1John.1.8" n="8" />If we say we have no sin, we deceive ourselves, and the truth is not in us.
+<verse eID="1John.1.8" />
+<verse sID="1John.1.9" osisID="1John.1.9" n="9" />If we confess our sins, He is faithful and just to forgive us our sins and to cleanse us from all unrighteousness.
+<verse eID="1John.1.9" />
+<verse sID="1John.1.10" osisID="1John.1.10" n="10" />If we say we have not sinned, we make Him out to be a liar, and His word is not in us.
+<verse eID="1John.1.10" />
+<chapter eID="1John.1" />
+</p>
+</div>
+
+
+    </osisText>
+</osis>
+

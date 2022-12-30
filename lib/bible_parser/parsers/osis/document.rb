@@ -21,6 +21,8 @@ class BibleParser
           when 'verse'
             end_verse if @mode == 'verse'
             start_verse(attributes)
+          when 'note'
+            start_footnote(attributes)
           end
         end
 
@@ -31,6 +33,8 @@ class BibleParser
               end_book
               @book_id = nil
             end
+          when 'note'
+            @mode = 'verse'
           end
         end
 
@@ -74,6 +78,15 @@ class BibleParser
           return unless attributes['sID']
           @verse = attributes['n'].to_i
           @text = ''
+          @mode = 'verse'
+        end
+
+        # Properly parse footnotes out of the text that shows up within a verse
+        def start_footnote(attributes)
+          @mode = 'note'
+        end
+
+        def end_footnote(attributes)
           @mode = 'verse'
         end
 

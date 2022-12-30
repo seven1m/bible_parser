@@ -157,6 +157,28 @@ describe BibleParser do
         expect(gen1_1.book_id).to eq('GEN')
       end
     end
+
+    context 'given an OSIS file with footnotes' do
+      let(:path) { fixture_path('osis.reference.truncated.xml') }
+
+      describe '#verses' do
+        let(:verses) { subject.verses }
+
+        it 'returns an array of all verses' do
+          expect(verses.size).to eq(10)
+        end
+
+        it 'correctly parses a verse' do
+          verse = verses[3]
+          expect(verse).to be_a(BibleParser::Verse)
+          expect(verse.num).to eq(4)
+          expect(verse.chapter_num).to eq(1)
+          expect(verse.book_num).to eq(1)
+          expect(verse.book_id).to eq('1JN')
+          expect(verse.text.strip).to eq('We write these things so that our joy may be complete.')
+        end
+      end
+    end
   end
 
   context 'given a `Zefania XML Bible Markup Language` formatted file' do
