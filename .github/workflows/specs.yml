@@ -1,0 +1,22 @@
+name: Specs
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  specs:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: install dependencies
+        run: |
+          sudo apt-get install -y -q build-essential zlib1g-dev liblzma-dev ruby ruby-dev
+          sudo gem install bundler
+          bundle config set deployment true
+          bundle install
+      - name: run specs
+        run: |
+          bundle exec rspec

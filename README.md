@@ -1,6 +1,6 @@
 # BibleParser
 
-[![Build Status](https://travis-ci.org/seven1m/bible_parser.svg?branch=master)](https://travis-ci.org/seven1m/bible_parser)
+[![Build](https://github.com/seven1m/bible_parser/actions/workflows/specs.yml/badge.svg)](https://github.com/seven1m/bible_parser/actions/workflows/specs.yml)
 
 This is a Ruby library for parsing different bible XML formats.
 
