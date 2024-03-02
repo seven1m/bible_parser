@@ -1,3 +1,7 @@
+# 1.1.2 (Mar 2, 2024)
+
+- Fix: USFX: Fix missing verses when <ve/> tag is not present
+
 # 1.1.1 (Jul 11, 2021)
 
 - Fix: OSIS: Set book title from <milestone> tag if available
