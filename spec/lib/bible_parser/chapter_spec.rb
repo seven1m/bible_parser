@@ -36,7 +36,7 @@ describe BibleParser::Chapter do
         expect(verses).to be_an(Enumerable)
         expect(first).to be_a(BibleParser::Verse)
         expect(first.num).to eq(1)
-        expect(last.num).to eq(2)
+        expect(last.num).to eq(4)
       end
     end
 
@@ -50,10 +50,10 @@ describe BibleParser::Chapter do
       end
 
       it 'returns an enumerable of verses for this chapter' do
-        expect(verses.size).to eq(2)
+        expect(verses.size).to eq(4)
         expect(verses.first).to be_a(BibleParser::Verse)
         expect(verses.first.num).to eq(1)
-        expect(verses.last.num).to eq(2)
+        expect(verses.last.num).to eq(4)
       end
     end
   end
@@ -62,10 +62,10 @@ describe BibleParser::Chapter do
     let(:verses) { subject.verses }
 
     it 'returns an array of all verses' do
-      expect(verses.size).to eq(2)
+      expect(verses.size).to eq(4)
       expect(verses.first).to be_a(BibleParser::Verse)
       expect(verses.first.num).to eq(1)
-      expect(verses.last.num).to eq(2)
+      expect(verses.last.num).to eq(4)
     end
   end
 end

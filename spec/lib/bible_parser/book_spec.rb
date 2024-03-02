@@ -24,7 +24,7 @@ describe BibleParser::Book do
         expect(first).to be_a(BibleParser::Chapter)
         expect(chapters.to_a)
         expect(first.num).to eq(1)
-        expect(last.num).to eq(1)
+        expect(last.num).to eq(2)
       end
     end
 
@@ -38,11 +38,11 @@ describe BibleParser::Book do
       end
 
       it 'yields to the block for each chapter' do
-        expect(chapters.size).to eq(1)
+        expect(chapters.size).to eq(2)
         exo1 = chapters.first
         expect(exo1).to be_a(BibleParser::Chapter)
         expect(exo1.num).to eq(1)
-        expect(chapters.last.num).to eq(1)
+        expect(chapters.last.num).to eq(2)
       end
     end
   end
@@ -51,11 +51,11 @@ describe BibleParser::Book do
     let(:chapters) { subject.chapters }
 
     it 'returns an array of all chapters' do
-      expect(chapters.size).to eq(1)
+      expect(chapters.size).to eq(2)
       exo1 = chapters.first
       expect(exo1).to be_a(BibleParser::Chapter)
       expect(exo1.num).to eq(1)
-      expect(chapters.last.num).to eq(1)
+      expect(chapters.last.num).to eq(2)
     end
   end
 end

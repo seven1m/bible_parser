@@ -241,6 +241,19 @@
       <v id='2'/>
       Reuben, Simeon, Levi, and Judah,
       <ve/>
+      <v id='3'/>
+      Issachar, Zebulun, and Benjamin,
+      <!-- missing <ve/> -->
+      <v id="4"/>Dan and Naphtali, Gad and Asher.
+      <!-- missing <ve/> -->
+    </p>
+    <c id='2'/>
+    <p>
+      <v id="1"/>
+      A man of the house of Levi went and took a daughter of Levi as his wife.
+      <ve/>
+      <v id="2"/>
+      The woman conceived, and bore a son. When she saw that he was a fine child, she hid him three months.
     </p>
   </book>
 </usfx>

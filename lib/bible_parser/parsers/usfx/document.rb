@@ -10,10 +10,12 @@ class BibleParser
         def start_element(name, attributes)
           case name
           when 'book'
+            end_verse if @mode == 'verse'
             start_book(attributes)
           when 'h'
             start_book_title(attributes)
           when 'c'
+            end_verse if @mode == 'verse'
             start_chapter(attributes)
           when 'v'
             end_verse if @mode == 'verse'

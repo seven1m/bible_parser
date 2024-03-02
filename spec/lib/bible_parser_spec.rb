@@ -65,7 +65,7 @@ describe BibleParser do
       let(:verses) { subject.verses }
 
       it 'returns an array of all verses' do
-        expect(verses.size).to eq(4) # only 4 verses in our sample
+        expect(verses.size).to eq(8) # only 8 verses in our sample
         gen1_1 = verses.first
         expect(gen1_1).to be_a(BibleParser::Verse)
         expect(gen1_1.num).to eq(1)
@@ -100,7 +100,7 @@ describe BibleParser do
         end
 
         it 'yields to the block for each verse' do
-          expect(verses.size).to eq(4) # only 4 verses in our sample
+          expect(verses.size).to eq(8) # only 8 verses in our sample
           gen1_1 = verses.first
           expect(gen1_1).to be_a(BibleParser::Verse)
           expect(gen1_1.num).to eq(1)
