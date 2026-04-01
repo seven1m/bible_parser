@@ -33,6 +33,10 @@ class BibleParser
               end_book
               @book_id = nil
             end
+          when 'verse'
+            end_verse if @mode == 'verse' && @wrapping_verse
+          when 'chapter'
+            end_chapter if @wrapping_chapter
           when 'note'
             @mode = 'verse'
           end
@@ -45,11 +49,10 @@ class BibleParser
           @book_num += 1
           @book_id = BOOK_IDS[id] || id.upcase[0..2]
           @mode = 'book'
-          @book_title = nil
+          @book_title = id
         end
 
         def set_book_title(attributes)
-          return if @book_title
           attributes = Hash[attributes]
           return unless attributes['type'] == 'main'
           @book_title = attributes['short']
@@ -68,6 +71,10 @@ class BibleParser
           attributes = Hash[attributes]
           if attributes['sID']
             @chapter = attributes['n'].to_i
+            @wrapping_chapter = false
+          elsif attributes['osisID']
+            @chapter = attributes['osisID'].split('.').last.to_i
+            @wrapping_chapter = true
           else
             end_chapter
           end
@@ -75,8 +82,15 @@ class BibleParser
 
         def start_verse(attributes)
           attributes = Hash[attributes]
-          return unless attributes['sID']
-          @verse = attributes['n'].to_i
+          if attributes['sID']
+            @verse = attributes['n'].to_i
+            @wrapping_verse = false
+          elsif attributes['osisID']
+            @verse = attributes['osisID'].split('.').last.to_i
+            @wrapping_verse = true
+          else
+            return
+          end
           @text = ''
           @mode = 'verse'
         end
