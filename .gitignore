@@ -3,3 +3,4 @@
 .ruby-gemset
 tmp
 .tool-versions
+Gemfile.lock
