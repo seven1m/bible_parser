@@ -1,3 +1,8 @@
+# 1.1.3 (Apr 1, 2026)
+
+- FIX: OSIS: Fix missing verse text when wrapping tags are used
+- FIX: Remove `has_rdoc` from gemspec for Ruby 4
+
 # 1.1.2 (Mar 2, 2024)
 
 - Fix: USFX: Fix missing verses when <ve/> tag is not present
