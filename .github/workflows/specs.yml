@@ -11,11 +11,9 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-      - name: install dependencies
-        run: |
-          sudo apt-get install -y -q build-essential zlib1g-dev liblzma-dev ruby ruby-dev
-          sudo gem install bundler
-          bundle install
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.4"
+          bundler-cache: true
       - name: run specs
-        run: |
-          bundle exec rspec
+        run: bundle exec rspec
