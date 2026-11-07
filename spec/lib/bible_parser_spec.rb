@@ -1,6 +1,26 @@
 require_relative '../spec_helper'
 
 describe BibleParser do
+  context 'given OSIS identifiers without numeric n attributes' do
+    let(:xml) do
+      <<~XML
+        <osis><osisText><div type="book" osisID="Matt">
+          <chapter sID="Matt.1" />
+          <verse sID="Matt.1.6" osisID="Matt.1.6" />First.<verse eID="Matt.1.6" />
+          <verse osisID="Matt.1.9 Matt.1.10">Combined.</verse>
+          <chapter eID="Matt.1" />
+        </div></osisText></osis>
+      XML
+    end
+
+    it 'reads milestone numbers and uses the first reference of a combined verse' do
+      verses = BibleParser.new(xml).verses
+      expect(verses.map(&:chapter_num)).to eq([1, 1])
+      expect(verses.map(&:num)).to eq([6, 9])
+      expect(verses.map { |verse| verse.text.strip }).to eq(['First.', 'Combined.'])
+    end
+  end
+
   context 'given a USFX formatted file' do
     let(:path) { fixture_path('web.usfx.truncated.xml') }
 

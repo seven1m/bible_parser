@@ -70,7 +70,7 @@ class BibleParser
         def start_chapter(attributes)
           attributes = Hash[attributes]
           if attributes['sID']
-            @chapter = attributes['n'].to_i
+            @chapter = (attributes['n'] || attributes['osisID'] || attributes['sID']).split('.').last.to_i
             @wrapping_chapter = false
           elsif attributes['osisID']
             @chapter = attributes['osisID'].split('.').last.to_i
@@ -83,10 +83,10 @@ class BibleParser
         def start_verse(attributes)
           attributes = Hash[attributes]
           if attributes['sID']
-            @verse = attributes['n'].to_i
+            @verse = (attributes['n'] || attributes['osisID'] || attributes['sID']).split.first.split('.').last.to_i
             @wrapping_verse = false
           elsif attributes['osisID']
-            @verse = attributes['osisID'].split('.').last.to_i
+            @verse = attributes['osisID'].split.first.split('.').last.to_i
             @wrapping_verse = true
           else
             return
